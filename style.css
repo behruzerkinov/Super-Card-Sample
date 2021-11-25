@@ -1,0 +1,148 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Raleway", sans-serif;
+  height: 100vh;
+  background: linear-gradient(to top right, #ff7c64, #4168d4) no-repeat;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  padding: 2em;
+}
+
+.card {
+  padding: 3em;
+  max-width: 30em;
+  border-radius: 20px;
+  box-shadow: 0px 0px 70px -20px rgb(143, 143, 143);
+  background: #fff;
+  transition: all cubic-bezier(.5,-.75,.7,2) .4s;
+}
+
+.card:hover {
+  transform: scale(1.0725);
+}
+
+.img-container {
+  width: 100%;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+.img {
+  max-width: 80%;
+}
+
+.circle {
+  height: 100%;
+  aspect-ratio: 1 / 1;
+  background: linear-gradient(to bottom left, #ff7c64, #4168d4);
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  border-radius: 50%;
+  z-index: -1;
+}
+
+.card-title {
+  font-size: 2em;
+  margin: 1em 0;
+  letter-spacing: 2px;
+}
+
+.card-subtitle {
+  font-size: 1em;
+  margin: 2em 0 1em;
+  line-height: 1.6;
+  font-family: 'Nunito';
+  letter-spacing: 1px;
+  color: #616161;
+}
+
+.size-links {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: 2em 0;
+}
+
+.size-link {
+  padding: 0.3em 1em;
+  font-size: 1.2em;
+  text-decoration: none;
+  color: #616161;
+  border-radius: 100vw;
+  font-family: 'Nunito';
+  border: 1px solid #616161;
+  transition: all ease .3s;
+}
+
+.size-link:hover {
+  box-shadow: none;
+  background: linear-gradient(to bottom right, #ff7c64, #4168d4);
+  color: #fff;
+  border-color: transparent;
+}
+
+.btn-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.purchase-btn {
+  text-decoration: none;
+  color: #fff;
+  padding: .8em 0;
+  background-color: #1e6aa0;
+  width: 100%;
+  text-align: center;
+  border-radius: 100vw;
+  transition: all ease .2s;
+}
+
+.purchase-btn:hover {
+  background-color: #004b81;
+}
+
+@media (max-width: 540px) {
+  .card {
+    padding: 2em;
+  }
+  .card-title {
+    font-size: 1.2em;
+  }
+
+  .card-subtitle {
+    font-size: 13px;
+  }
+
+  .size-link {
+    font-size: 13px;
+  }
+
+  .size-links {
+    gap: .5em;
+    display: flex;
+    justify-content: space-between;
+  }
+}
